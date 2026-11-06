@@ -1,0 +1,62 @@
+/* Configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Configuração padrão de todas as seções */
+.page-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 4% 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-section-contact {
+  width: 100%;
+  min-height: 50vh;
+  padding: 10px 4% 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Container para conteúdo centralizado */
+.section-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Grid padrão */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .page-section {
+    padding: 100px 6% 50px;
+  }
+  
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

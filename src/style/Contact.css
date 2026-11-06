@@ -1,0 +1,306 @@
+
+/* =====================================
+   LAYOUT PRINCIPAL
+===================================== */
+
+.contact-content {
+  padding: 60px 0;
+}
+
+.section-container-contact {
+  background: var(--background-contact);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 45px;
+  align-items: stretch;
+}
+
+/* =====================================
+   COLUNA ESQUERDA
+===================================== */
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+  padding-right: 30px;
+  border-right: 1px solid #D8DEE3;
+}
+
+/* Logo */
+
+.contact-logo-maju {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.contact-image {
+  width: 150px;
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Texto introdutório */
+
+.contact-description {
+  color: #35434E;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =====================================
+   CARDS DE CONTATO
+===================================== */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  min-width: 0;
+  padding: 20px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E0E5E9;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(38, 55, 70, 0.05);
+}
+
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 0;
+}
+
+.contact-detail-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 5px;
+  color: #263746;
+}
+
+.contact-detail-heading svg {
+  color: #278D4C;
+  flex-shrink: 0;
+}
+
+.contact-detail-heading strong {
+  font-size: 16px;
+}
+
+.contact-detail p,
+.contact-detail a {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #35434E;
+  overflow-wrap: anywhere;
+}
+
+.contact-detail a {
+  text-decoration: none;
+}
+
+.contact-detail a:hover {
+  color: #278D4C;
+}
+
+.contact-second-phone {
+  margin-top: 10px !important;
+}
+
+/* Dados cadastrais */
+
+.contact-company-data {
+  padding-top: 15px;
+  border-top: 1px solid #E0E5E9;
+}
+
+.contact-company-data p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 5px 0;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================
+   COLUNA DIREITA - FORMULÁRIO
+===================================== */
+
+.contact-form-container {
+  min-width: 0;
+  padding-top: 100px;
+}
+
+.contact-form-container h3 {
+  font-size: 30px;
+  margin: 0 0 15px;
+  align-items: center;
+  text-align: center;
+  color: #263746;
+}
+
+.contact-form-container > .contact-title-line {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 0 16px;
+  border: 1px solid #CBD4DC;
+  border-radius: 9px;
+  background: #FFFFFF;
+  color: #263746;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field:focus-within {
+  border-color: #278D4C;
+  box-shadow: 0 0 0 3px rgba(39, 141, 76, 0.10);
+}
+
+.form-field svg {
+  flex-shrink: 0;
+  color: #278D4C;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #263746;
+  font: inherit;
+  font-size: 15px;
+}
+
+.form-field input {
+  height: 52px;
+}
+
+.form-field textarea {
+  padding: 16px 0;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #78838D;
+}
+
+.form-message {
+  align-items: flex-start;
+  margin-top: 18px;
+}
+
+.form-message svg {
+  margin-top: 17px;
+}
+
+.contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 220px;
+  margin: 25px 0 0 auto;
+  padding: 16px 25px;
+  border: none;
+  border-radius: 9px;
+  background: #263746;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contact-submit:hover:not(:disabled) {
+  background: #278D4C;
+  transform: translateY(-2px);
+}
+
+.contact-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 14px;
+  color: #278D4C;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 1100px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-left {
+    padding-right: 0;
+    padding-bottom: 30px;
+    border-right: none;
+    border-bottom: 1px solid #D8DEE3;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-content {
+    padding: 35px 0;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-form-container h3 {
+    font-size: 25px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
+}
