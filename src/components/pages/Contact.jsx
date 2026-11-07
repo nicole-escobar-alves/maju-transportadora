@@ -73,6 +73,7 @@ function Contact() {
               {/* Card 1: Telefone e E-mail */}
               <div className="contact-card">
 
+                {/* DESATIVADO TEMPORARIAMENTE
                 <div className="contact-detail">
                   <div className="contact-detail-heading">
                     <Phone size={20} />
@@ -84,7 +85,7 @@ function Contact() {
 
                   <p className="contact-second-phone">(35) 98401-0149</p>
                   <p>Tatiane Escobar</p>
-                </div>
+                </div> */}
 
                 <div className="contact-detail">
                   <div className="contact-detail-heading">

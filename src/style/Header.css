@@ -13,6 +13,7 @@
 
   background-color: var(--background);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
 }
 
 .header-container {
@@ -20,6 +21,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-width: 0;
 }
 
 .header-nav {
@@ -89,4 +91,111 @@
 
 .header-whatsapp:hover {
   background-color: #1EBE5D;
+}
+
+.mobile-whatsapp,
+.header-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header-menu-toggle {
+    display: none;
+  }
+}
+
+/* MOBILE E TABLETS */
+
+@media (max-width: 900px) {
+
+  .header {
+    padding: 12px 5%;
+  }
+
+  .header-container {
+    position: relative;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  /* Hambúrguer */
+  .header-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+
+    padding: 6px;
+    flex-shrink: 0;
+  }
+
+  /* Menu fechado */
+  .header-nav {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -5.56%;
+    width: 111.12%;
+
+    padding: 24px 5%;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    background-color: var(--background);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Menu aberto */
+  .header-nav.open {
+    display: flex;
+  }
+
+  .header-nav a {
+    font-size: 17px;
+  }
+
+  /* WhatsApp permanece visível */
+  .header-whatsapp {
+    display: inline-flex;
+    flex-shrink: 0;
+    padding: 10px 14px;
+  }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+  .header {
+    padding: 10px 4%;
+  }
+
+  .header-container {
+    gap: 10px;
+  }
+
+  .header-nav {
+    left: -4.17%;
+    width: 108.34%;
+    padding: 22px 4%;
+  }
+
+  .header-whatsapp {
+    padding: 9px 12px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .header-whatsapp svg {
+    width: 19px;
+    height: 19px;
+  }
+
 }

@@ -1,49 +1,99 @@
 .home-content {
   position: relative;
-  display: flex !important;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
+  width: 100%;
+  min-height: 100vh;
 
-  background-image: url('../assets/images/truck_background.png');
+  background-image: url('../assets/images/truck_background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: var(--text-primary);
 }
 
 .home-content .section-container {
+  position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 1400px;
+  min-height: calc(100vh - 160px);
+
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
 }
 
+/* Logo */
 .logo_container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-
-  width: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .logo_maju {
-  width: 150px;
-  height: 150px;
+  display: block;
+  width: 120px;
+  height: auto;
   object-fit: contain;
-  flex-shrink: 0;
 }
 
+/* Título */
 .title-container {
-  display: flex;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  z-index: 2;
 }
 
 .home-title {
-  max-width: 550px;
-  font-size: clamp(24px, 2vw, 40px);
-  text-align: left;
+  font-size: clamp(24px, 3vw, 40px);
   color: var(--text);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .home-content {
+    background-position: 80% center;
+  }
+
+  .logo_container {
+    margin-left: 15px;
+  }
+
+  .title-container h1 {
+    font-size: clamp(12px, 5vw, 30px);
+  }
+
+  .logo_maju {
+    width: 115px;
+  }
+
+  .title-container {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: calc(100% - 20px);
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .home-content {
+    background-position: 80% center;
+  }
+
+  .logo_container {
+    margin-left: 10px;
+  }
+
+  .logo_maju {
+    width: 100px;
+  }
+
+  .title-container h1 {
+    font-size: clamp(12px, 4vw, 30px);
+  }
+
+  .title-container {
+    margin-top: 0px;
+    margin-left: 10px;
+    width: calc(100% - 20px);
+  }
 }

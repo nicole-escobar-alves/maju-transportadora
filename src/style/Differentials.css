@@ -1,0 +1,143 @@
+
+.differentials-section {
+  background-color: #172f49;
+  color: #ffffff;
+}
+
+.differentials-section .section-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+
+.differentials-header {
+  max-width: 750px;
+  margin-bottom: 45px;
+}
+
+.differentials-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #66c5ea;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.differentials-title {
+  color: #ffffff;
+  font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.differentials-description {
+  color: #d7e1ea;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+/* Grid */
+
+.differentials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* Cards */
+
+.differential-card {
+  min-height: 260px;
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #24445f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.differential-card:hover {
+  transform: translateY(-6px);
+  background-color: #2a506e;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícones */
+
+.differential-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #66c5ea;
+  background-color: rgba(102, 197, 234, 0.12);
+  border-radius: 10px;
+}
+
+/* Textos */
+
+.differential-card h3 {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.differential-card p {
+  color: #d7e1ea;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Tablets */
+
+@media (max-width: 1000px) {
+  .differentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+  .differentials-section {
+    min-height: auto;
+  }
+
+  .differentials-header {
+    margin-bottom: 30px;
+  }
+
+  .differentials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .differential-card {
+    min-height: auto;
+    padding: 25px 22px;
+  }
+
+  .differential-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+  }
+}

@@ -1,6 +1,6 @@
 import '../../style/Insurance.css'
 import { ShieldCheck } from 'lucide-react'
-import insuranceBackground from '../../assets/images/insurance_background.png'
+import insuranceBackground from '../../assets/images/insurance_background.webp'
 
 function Insurance() {
   return (
@@ -16,7 +16,7 @@ function Insurance() {
         ),
         url(${insuranceBackground})
       `
-        }}
+      }}
     >
       <div className="insurance-overlay">
         <div className="section-container">
@@ -35,7 +35,7 @@ function Insurance() {
             </p>
           </div>
 
-          <div className="insurance-cards">
+          <div className="grid-layout insurance-grid">
 
             <div className="insurance-card">
               <ShieldCheck size={32} />
@@ -56,14 +56,12 @@ function Insurance() {
             </div>
 
           </div>
-
           <div className="insurance-footer">
             <ShieldCheck size={20} />
             <span>
               Cobertura em todo o território nacional.
             </span>
           </div>
-
         </div>
       </div>
     </section>

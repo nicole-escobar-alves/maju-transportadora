@@ -4,7 +4,7 @@ import About from './components/pages/About'
 import Insurance from './components/pages/Insurance'
 import Fleet from './components/pages/Fleet'
 import Contact from './components/pages/Contact'
-import Partners from './components/pages/Partners'
+import Differentials from './components/pages/Differentials'
 
 import './App.css'
 
@@ -25,8 +25,8 @@ function App() {
       <section id="Insurance">
         <Insurance />
       </section>
-      <section id="Partners">
-        <Partners />
+      <section id="Differentials">
+        <Differentials />
       </section>
       <section id="Contact">
         <Contact />

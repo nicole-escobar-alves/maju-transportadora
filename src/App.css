@@ -22,11 +22,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 .page-section-contact {
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   padding: 10px 4% 30px;
 
   display: flex;
@@ -39,6 +40,8 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+
+  background: transparent;
 }
 
 /* Grid padrão */
@@ -53,7 +56,7 @@ body {
   .page-section {
     padding: 100px 6% 50px;
   }
-  
+
 
   .grid-layout {
     grid-template-columns: 1fr;
