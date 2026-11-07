@@ -11,9 +11,20 @@
   display: flex;
   align-items: center;
 
-  background-color: var(--background);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
+  background-color: #263746;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu hambúrguer escondido no desktop */
+.header-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .header-container {
@@ -21,7 +32,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-width: 0;
 }
 
 .header-nav {
@@ -36,7 +46,7 @@
 
   font-size: 18px;
   font-weight: 500;
-  color: var(--primary);
+  color: var(--text-light);
   text-decoration: none;
 
   padding: 8px 0;
@@ -52,7 +62,7 @@
   width: 100%;
   height: 3px;
   border-radius: 2px;
-  background-color: var(--accent);
+  background-color: var(--primary);
 
   transform: scaleX(0);
   transform-origin: center;
@@ -66,7 +76,7 @@
 
 .header-nav a.active,
 .header-nav a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 /* WhatsApp */
@@ -93,63 +103,43 @@
   background-color: #1EBE5D;
 }
 
-.mobile-whatsapp,
-.header-menu-toggle {
-  display: none;
-}
+/* Menu mobile */
 
+/* Menu mobile */
 @media (max-width: 900px) {
-  .header-menu-toggle {
-    display: none;
-  }
-}
-
-/* MOBILE E TABLETS */
-
-@media (max-width: 900px) {
-
-  .header {
-    padding: 12px 5%;
-  }
-
   .header-container {
     position: relative;
-    justify-content: space-between;
-    gap: 16px;
   }
 
-  /* Hambúrguer */
+  /* Botão hambúrguer */
   .header-menu-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: none;
+    background: transparent;
     border: none;
-    color: var(--primary);
+    color: #FFFFFF;
     cursor: pointer;
-
-    padding: 6px;
-    flex-shrink: 0;
+    padding: 5px;
+    z-index: 1002;
   }
 
   /* Menu fechado */
   .header-nav {
     display: none;
-
     position: absolute;
     top: calc(100% + 12px);
-    left: -5.56%;
-    width: 111.12%;
-
-    padding: 24px 5%;
+    left: -5.55%;
+    width: 111.1%;
 
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 8px;
 
-    background-color: var(--background);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    padding: 20px 5%;
+    background-color: #263746;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
   }
 
   /* Menu aberto */
@@ -158,44 +148,24 @@
   }
 
   .header-nav a {
-    font-size: 17px;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 12px 0;
   }
 
-  /* WhatsApp permanece visível */
+  /* Remove a linha animada do menu mobile */
+  .header-nav a::after {
+    display: none;
+  }
+
+  .header-nav a.active,
+  .header-nav a:hover {
+    color: #75C9E8;
+  }
+
+  /* WhatsApp continua visível */
   .header-whatsapp {
-    display: inline-flex;
-    flex-shrink: 0;
-    padding: 10px 14px;
+    margin-left: auto;
+    margin-right: 15px;
   }
-}
-
-/* CELULARES PEQUENOS */
-
-@media (max-width: 480px) {
-
-  .header {
-    padding: 10px 4%;
-  }
-
-  .header-container {
-    gap: 10px;
-  }
-
-  .header-nav {
-    left: -4.17%;
-    width: 108.34%;
-    padding: 22px 4%;
-  }
-
-  .header-whatsapp {
-    padding: 9px 12px;
-    font-size: 13px;
-    gap: 6px;
-  }
-
-  .header-whatsapp svg {
-    width: 19px;
-    height: 19px;
-  }
-
 }

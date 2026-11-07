@@ -97,7 +97,7 @@
 }
 
 .contact-detail-heading svg {
-  color: #278D4C;
+  color: var(--primary-hover);
   flex-shrink: 0;
 }
 
@@ -188,7 +188,7 @@
 
 .form-field svg {
   flex-shrink: 0;
-  color: #278D4C;
+  color: var(--primary-hover);
 }
 
 .form-field input,
@@ -236,7 +236,7 @@
   padding: 16px 25px;
   border: none;
   border-radius: 9px;
-  background: #263746;
+  background: var(--primary-hover);
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 600;

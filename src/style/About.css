@@ -1,61 +1,137 @@
+
+/* Fundo da seção */
 .about-content {
-    background: linear-gradient(
-    110deg,
-    #263746 0%,
-    #30483F 70%,
-    #3A573D 100%
-  );
-  color: var(--text-light);
+  background-image: url('../assets/images/map_background.webp');
+  background-size: auto 120%;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
-
-.about-grid {
-  align-items: center;
-}
-
-.grid-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-.about-image {
+/* Conteúdo */
+.about-content .section-container {
+  position: relative;
   width: 100%;
-  max-width: 450px;
-  height: auto;
-  object-fit: contain;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.about-location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-align: center;
+/* Texto */
+.about-description {
+  max-width: 750px;
 }
-
-.about-card-icon {
-  color: var( --text-light);
-}
-
-/* Espaçamento entre o título e o texto */
 
 .about-description h2 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 24px;
+  color: var(--text-light);
 }
 
-/* Espaçamento entre textos */
 .about-content p {
-  margin-bottom: 24px;
-  font-size: 12px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-light);
 }
 
-.about-content li {
-  margin-bottom: 5px;
-  font-size: 12px;
-  color: var(--prmary);
+/* Grid de operações */
+.operations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+
+/* Cards */
+.operation-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+
+  background: rgba(52, 77, 96, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.operation-card:hover {
+  transform: translateY(-4px);
+  background: #3A566B;
+}
+
+/* Ícones */
+.operation-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #75C9E8;
+}
+
+/* Informações */
+.operation-info h3 {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.operation-info p {
+  color: #D5E0E8;
+  font-size: 11px;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* Último card ocupa a linha inteira */
+.operation-card:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Localização */
+.about-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  margin-top: 20px;
+}
+
+.about-card-icon {
+  color: #75C9E8;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .about-description h2 {
+    font-size: 32px;
+  }
+  .about-content{
+        background-position: right center;
+    background-size: auto 100%;
+  }
+  .operations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operation-card:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-content{
+        background-position: left center;
+    background-size: auto 100%;
+  }
+  .operations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .operation-card:last-child {
+    grid-column: auto;
+  }
 }
